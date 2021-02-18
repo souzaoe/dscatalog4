@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import ProductCardLoader from 'core/components/Loaders/ProductCardLoader';
 import { ProductsResponse } from 'core/types/Product';
+import Pagination from 'core/components/Pagination';
 import { makeRequest } from 'core/utils/request';
 import ProductCard from './components/ProductCard';
+import ProductCardLoader from 'core/components/Loaders/ProductCardLoader';
 import './styles.scss';
+
 
 const Catalog = () => {
     const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
@@ -38,8 +40,9 @@ const Catalog = () => {
                     ))
                 )}
             </div>
+            <Pagination />
         </div>
-    );
-}
+    )
+};
 
 export default Catalog; 
