@@ -29,13 +29,20 @@
 
 .pagination-previous {
     transform: rotate(-180deg);
-    margin-right: 25px;
-    color:#E1E1E1; 
-    cursor: pointer;
+    margin-right: 25px;  
 }
 
 .pagination-next {
-    margin-left: 15px;
-    color: #407bFF; 
+    margin-left: 15px;    
     cursor: pointer;
+}
+
+.page-active {
+    cursor: pointer;
+    color: #407bFF; 
+}
+
+.page-inactive {
+    color:#E1E1E1; 
+    pointer-events: none;
 }
